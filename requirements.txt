@@ -1,0 +1,8 @@
+Flask==2.3.3
+requests==2.31.0
+python-whois==0.8.0
+beautifulsoup4==4.12.2
+phonenumbers==8.13.20
+validators==0.22.0
+colorama==0.4.6
+python-dateutil==2.8.2
