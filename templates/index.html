@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أداة OSINT المتكاملة</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <nav class="navbar">
+            <div class="container">
+                <span class="navbar-brand">
+                    <i class="fas fa-search-location"></i>
+                    أداة OSINT المتكاملة
+                </span>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <div class="search-card">
+                <div class="search-header">
+                    <div class="search-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h1>البحث الشامل عن المعلومات</h1>
+                    <p class="lead">اكتشف وابحث في مختلف أنواع البيانات بسهولة</p>
+                </div>
+
+                <div class="search-options">
+                    <div class="option-buttons">
+                        <button class="option-btn active" data-type="email">
+                            <i class="fas fa-envelope"></i>
+                            <span>البريد الإلكتروني</span>
+                        </button>
+                        <button class="option-btn" data-type="phone">
+                            <i class="fas fa-phone"></i>
+                            <span>الهاتف</span>
+                        </button>
+                        <button class="option-btn" data-type="person">
+                            <i class="fas fa-user"></i>
+                            <span>الأشخاص</span>
+                        </button>
+                        <button class="option-btn" data-type="mac">
+                            <i class="fas fa-network-wired"></i>
+                            <span>MAC</span>
+                        </button>
+                        <button class="option-btn" data-type="ip">
+                            <i class="fas fa-globe"></i>
+                            <span>IP</span>
+                        </button>
+                        <button class="option-btn" data-type="bitcoin">
+                            <i class="fab fa-bitcoin"></i>
+                            <span>بيتكوين</span>
+                        </button>
+                        <button class="option-btn" data-type="ipv6">
+                            <i class="fas fa-network-wired"></i>
+                            <span>IPv6</span>
+                        </button>
+                        <button class="option-btn" data-type="username">
+                            <i class="fas fa-at"></i>
+                            <span>اسم المستخدم</span>
+                        </button>
+                        <button class="option-btn" data-type="website">
+                            <i class="fas fa-globe"></i>
+                            <span>المواقع</span>
+                        </button>
+                        <button class="option-btn" data-type="company">
+                            <i class="fas fa-building"></i>
+                            <span>الشركات</span>
+                        </button>
+                    </div>
+
+                    <div class="search-input-wrapper">
+                        <input type="text" id="searchQuery" class="search-input" placeholder="أدخل نص البحث هنا...">
+                        <button id="searchButton" class="search-button">
+                            <i class="fas fa-search"></i>
+                            بحث
+                        </button>
+                    </div>
+                </div>
+
+                <div id="results" class="results-section">
+                    <div class="results-container d-none">
+                        <div class="results-header">
+                            <i class="fas fa-list-alt"></i>
+                            <h2>نتائج البحث</h2>
+                        </div>
+                        <div id="resultsContent" class="results-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Al-Shwaib &copy; 2025</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
